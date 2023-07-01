@@ -8,6 +8,6 @@ resource "aws_instance" "instances" {
   count         = 2
 
   tags = {
-    Name = "Webserver-${count.index + 1}-Chris"
+    Name = "Webserver-${count.index + 1}"
   }
 }
