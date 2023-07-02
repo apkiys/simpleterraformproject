@@ -1,0 +1,16 @@
+---
+- name: Install Apache web server
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install Apache package
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: true
